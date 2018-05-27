@@ -1,0 +1,9 @@
+plugins {
+    id 'application'
+}
+
+mainClassName='com.zpy.core.Execute'
+
+dependencies {
+    compile project(':common')
+}

@@ -1,0 +1,6 @@
+rootProject.name = 'parent'
+include 'common'
+include 'manager'
+
+
+
