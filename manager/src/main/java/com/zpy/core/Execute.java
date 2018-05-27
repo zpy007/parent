@@ -1,15 +1,18 @@
 package com.zpy.core;
 
-import com.zpy.util.Tool;
+
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Execute {
 
     public static void main(String[] args){
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("content.xml");
+        /*ApplicationContext context = new ClassPathXmlApplicationContext("content.xml");
         Tool tool=context.getBean("tool",Tool.class);
-        tool.Use();
+        tool.Use();*/
+        ApplicationContext ctx=new AnnotationConfigApplicationContext(AppConfig.class);
+        ZBeans beans= ctx.getBean(ZBeans.class);
+        beans.Fun();
     }
 }
