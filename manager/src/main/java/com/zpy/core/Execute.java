@@ -13,7 +13,8 @@ public class Execute {
         tool.Use();*/
         //ApplicationContext ctx=new AnnotationConfigApplicationContext(AppConfig.class);
         AnnotationConfigApplicationContext ctx=new AnnotationConfigApplicationContext();
-        ctx.register(AppConfig.class);
+        //ctx.register(AppConfig.class);
+        ctx.scan("com.zpy");
         ctx.refresh();
         ZBeans beans= ctx.getBean(ZBeans.class);
         beans.Fun();
