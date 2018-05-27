@@ -1,6 +1,6 @@
 rootProject.name = 'parent'
 include 'common'
 include 'manager'
-
-
+include 'manager:web'
+findProject(':manager:web')?.name = 'web'
 
