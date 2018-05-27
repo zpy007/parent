@@ -11,7 +11,10 @@ public class Execute {
         /*ApplicationContext context = new ClassPathXmlApplicationContext("content.xml");
         Tool tool=context.getBean("tool",Tool.class);
         tool.Use();*/
-        ApplicationContext ctx=new AnnotationConfigApplicationContext(AppConfig.class);
+        //ApplicationContext ctx=new AnnotationConfigApplicationContext(AppConfig.class);
+        AnnotationConfigApplicationContext ctx=new AnnotationConfigApplicationContext();
+        ctx.register(AppConfig.class);
+        ctx.refresh();
         ZBeans beans= ctx.getBean(ZBeans.class);
         beans.Fun();
     }
