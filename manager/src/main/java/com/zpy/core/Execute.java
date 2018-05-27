@@ -11,6 +11,5 @@ public class Execute {
         ApplicationContext context = new ClassPathXmlApplicationContext("content.xml");
         Tool tool=context.getBean("tool",Tool.class);
         tool.Use();
-
     }
 }
