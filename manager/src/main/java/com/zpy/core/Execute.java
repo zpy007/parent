@@ -9,8 +9,8 @@ public class Execute {
     public static void main(String[] args){
 
         ApplicationContext context = new ClassPathXmlApplicationContext("content.xml");
-        Tool tool=context.getBean("tool",Tool.class);
-        tool.Use();
+        ZBeans bean=context.getBean("zbean",ZBeans.class);
+        bean.Fun();
 
     }
 }
